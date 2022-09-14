@@ -10,7 +10,6 @@ async function bootstrap() {
     .setDescription('This is the endpoint for solidity parsing which is explored by getting the verified code.')
     .setVersion('1.0')
     .addTag('Solidity-Parser')
-    .setBasePath('https://solidity-parser.vercel.app/../')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api-docs', app, document);
