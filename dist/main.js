@@ -13,7 +13,7 @@ async function bootstrap() {
         .addTag('Solidity-Parser')
         .build();
     const document = swagger_1.SwaggerModule.createDocument(app, config);
-    swagger_1.SwaggerModule.setup('api-docs', app, document);
+    swagger_1.SwaggerModule.setup('/api-docs', app, document);
     app.useStaticAssets((0, path_1.join)(__dirname, '/api-docs'), {
         prefix: '/api-docs',
     });
