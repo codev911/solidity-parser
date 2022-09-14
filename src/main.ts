@@ -11,7 +11,6 @@ async function bootstrap() {
     .setTitle('Solidity Parser')
     .setDescription('This is the endpoint for solidity parsing which is explored by getting the verified code.')
     .setVersion('1.0')
-    .addTag('Solidity-Parser')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('/api-docs', app, document);
