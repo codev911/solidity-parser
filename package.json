@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build && npx copyfiles ./node_modules/swagger-ui-dist/* ./dist/api-docs",
+    "build": "nest build && npx copyfiles -f ./node_modules/swagger-ui-dist/* ./dist/api-docs",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
