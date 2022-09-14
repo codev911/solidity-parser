@@ -5,7 +5,7 @@ import axios from 'axios';
 @Injectable()
 export class AppService {
   getHello() {
-    return { message: 'This is API for downloading solidity source code from verified contract.' };
+    return { message: 'This is API for parsing solidity source code from verified contract.' };
   }
 
   getChainList() {

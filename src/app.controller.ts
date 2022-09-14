@@ -1,5 +1,12 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
+import { ApiBody, ApiProperty } from '@nestjs/swagger';
 import { AppService } from './app.service';
+
+export class parseSourceCode{
+  @ApiProperty({ example: 'mainnet'}) network: string;
+  @ApiProperty({ example: '0x0000000000000000000000000000000000000000'}) address: string;
+  @ApiProperty({ example: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ12345678'}) apikey: string;
+}
 
 @Controller()
 export class AppController {
@@ -15,6 +22,7 @@ export class AppController {
     return this.appService.getChainList();
   }
 
+  @ApiBody({type: parseSourceCode})
   @Post('parse-sourcecode')
   getSource(
     @Body('network') network: string,
